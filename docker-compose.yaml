@@ -1,0 +1,11 @@
+version: '3'
+services:
+  container_apache_python:
+    build: ./Docker_Web_Py
+    ports:
+    - '4000:80'
+    volumes:
+    - ./Docker_Web_Py:/var/www/html
+volumes:
+  web-data:
+    driver: local
